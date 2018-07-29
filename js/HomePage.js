@@ -104,7 +104,6 @@ var months = ["January", "February", "March", "April", "May", "June", "July", "A
 	
 	var pTable = document.getElementById("past");
 	
-	
 	var events = [
 		
 		[[8, 30 , 2018], "Chill First Meeting", "6:00 PM", "CSIC 2120", "Catch up and discuss semester goals and meeting structure"],
@@ -113,16 +112,8 @@ var months = ["January", "February", "March", "April", "May", "June", "July", "A
 		[[9, 13 , 2018], "Unity Tutorial: Joey", "7:00 PM", "CSIC 2120", "Basic Unity tutorial for complete beginners. Covers unity workflow/inspector and some light scripting"],
 		[[9, 14 , 2018], "Unity Tutorial: Josh","5:00 PM", "CSIC 2120", "Basic Unity tutorial for complete beginners. Covers unity workflow/inspector and some light scripting"],
 		[[9, 15 , 2018], "GameMaker Tutorial: Stephen","3:00 PM", "CSIC 2120", "Basic GameMaker tutorial for complete beginners. Covers GM workflow, objects, and inspector"]
-			
-			
-		
+				
 	];
-	
-	
-	
-	
-	
-	
 	var row = uTable.insertRow(0);
 	var cell1 = row.insertCell(0);
 	var cell2 = row.insertCell(1);
@@ -133,16 +124,7 @@ var months = ["January", "February", "March", "April", "May", "June", "July", "A
 	cell2.innerHTML = "Event";
 	cell3.innerHTML = "Time";
 	cell4.innerHTML = "Location";
-	/*
-	 row = pTable.insertRow(0);
-	 cell1 = row.insertCell(0);
-	 cell2 = row.insertCell(1);
-	 cell3 = row.insertCell(2);
 	
-	cell1.innerHTML = "Date";
-	cell2.innerHTML = "Event";
-	cell3.innerHTML = "Description";
-	*/
 	var d = new Date();
 	
 	var curmonth = d.getMonth();
@@ -150,7 +132,6 @@ var months = ["January", "February", "March", "April", "May", "June", "July", "A
 	var curyear = d.getFullYear();
 	
 	var ucounter = 0;
-	
 	
 	for (var i = 0; i < events.length; i++){
 		
@@ -179,32 +160,9 @@ var months = ["January", "February", "March", "April", "May", "June", "July", "A
 	cell1.className = "hiddenrow";	
 	cell1.colSpan = 4;
 	cell1.innerHTML = events[i][4];
-		
 	cell1.style.display = 'none';
-		
 	ucounter++;	
-		
-		
-	} else {
-		
-		
-	/*row = pTable.insertRow();
-    cell1 = row.insertCell(0);
-	cell2 = row.insertCell(1);
-	cell3 = row.insertCell(2);
-	
-	
-	cell2.innerHTML = events[i][1];
-	cell3.innerHTML = events[i][2];
-		
-	pcounter++;
-	*/	
-		
-		
-	}
-	
-
-	
+	} else {		}
 }
 	
 	
