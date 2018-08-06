@@ -2,8 +2,14 @@
 
 function makeNavbar(){
 
+
 	//<li><a href='resources.html'>Resources</a></li>   <li><a href='about.html'>About</a></li>          
-    document.getElementById("navarea").innerHTML = document.getElementById("navarea").innerHTML = "<nav class='navbar navbar-inverse'> <a href='#' class='navbar-left'><img src='images/logo.png'></a><div class='container-fluid'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#myNavbar'>Menu</button><a class='navbar-brand' href='#'>UMD GDC</a></div>      <div class='collapse navbar-collapse float_right' id='myNavbar'>        <ul class='nav navbar-nav'>          <li><a href='index.html'>Home</a></li>          <li><a href='events.html'>Events</a></li>          <li><a href='projects.html'>Projects</a></li>          <li><a href='games.html'>Games</a></li>          <li><a href='resources.html'>Resources</a></li>          <li><a href='about.html'>About</a></li>          <li><a href='contact.html'>Contact</a></li></ul></div></div></nav>";
+    document.getElementById("navarea").innerHTML = document.getElementById("navarea").innerHTML = "<nav class='navbar navbar-inverse'> <a href='index.html' class='navbar-left'><img src='images/logo.png'></a><div class='container-fluid'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#myNavbar'>Menu</button><a class='navbar-brand' href='index.html'>UMD GDC</a></div>      <div class='collapse navbar-collapse float_right' id='myNavbar'>        <ul class='nav navbar-nav'>       <li><a href='index.html'>Home</a></li>     <li><a href='events.html'>Events</a></li>     <li><a href='games.html'>Games</a></li>          <li><a href='learn.html'>Learn</a></li>          <li><a href='about.html'>About</a></li>          <li><a href='index.html#contact'>Contact</a></li></ul></div></div></nav>";
+}
+
+function makeNavbarFolder(){
+
+	document.getElementById("navarea").innerHTML = document.getElementById("navarea").innerHTML = "<nav class='navbar navbar-inverse'> <a href='../index.html' class='navbar-left'><img src='../images/logo.png'></a><div class='container-fluid'><div class='navbar-header'><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#myNavbar'>Menu</button><a class='navbar-brand' href='../index.html'>UMD GDC</a></div>      <div class='collapse navbar-collapse float_right' id='myNavbar'>        <ul class='nav navbar-nav'>       <li><a href='../index.html'>Home</a></li>     <li><a href='../events.html'>Events</a></li>     <li><a href='../games.html'>Games</a></li>          <li><a href='../learn.html'>Learn</a></li>          <li><a href='../about.html'>About</a></li>          <li><a href='../index.html#contact'>Contact</a></li></ul></div></div></nav>";
 }
 
 function makeFooter(){
@@ -22,26 +28,77 @@ function makeHeader(){
 }
 
 
+var events = [
+		
+	[[8, 30 , 2018], "Chill First Meeting", "6:00 PM", "CSIC 2120", "Catch up and discuss semester goals and meeting structure"],
+	[[9, 6 , 2018], "First Look Prep Meeting", "6:00 PM", "CSIC 2120","Prepare Demos for first look fair and get volunteers"],
+	[[9, 13 , 2018], "First Look Meeting", "6:00 PM", "CSIC 1115", "Inform new people about the club and demo"],
+	[[9, 13 , 2018], "Unity Tutorial: Joey", "7:00 PM", "CSIC 2120", "Basic Unity tutorial for complete beginners. Covers unity workflow/inspector and some light scripting"],
+	[[9, 14 , 2018], "Unity Tutorial: Josh","5:00 PM", "CSIC 2120", "Basic Unity tutorial for complete beginners. Covers unity workflow/inspector and some light scripting"],
+	[[9, 15 , 2018], "GameMaker Tutorial: Stephen","3:00 PM", "CSIC 2120", "Basic GameMaker tutorial for complete beginners. Covers GM workflow, objects, and inspector"]
+			
+];
+
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+
+
+function nth(d) {
+	if(d>3 && d<21) return 'th'; // thanks kennebec
+	switch (d % 10) {
+		  case 1:  return "st";
+		  case 2:  return "nd";
+		  case 3:  return "rd";
+		  default: return "th";
+	  }
+  } 
+
+function nextMeeting () {
+
+	var nmeeting = document.getElementById("nmeeting");
+	nmeeting.innerHTML = "the fuck?";
+	
+	var d = new Date();
+	
+	var curmonth = d.getMonth();
+	var curday = d.getDate();
+	var curyear = d.getFullYear();
+	
+    
+    
+    var thingy = events.length;
+
+	
+	for (var i = 0; i < thingy; i++){
+		
+	var eventdate = events[i][0];
+	
+	
+	//add to upcoming table	
+	if (eventdate[0] > curmonth + 1 || (eventdate[0] === (curmonth + 1) && eventdate[1] >= curday + 1) && eventdate[2] >= curyear){
+		
+		if (events[i][1].includes("eeting")){
+		   nmeeting.innerHTML = "Next meeting will be held on " + months[events[i][0][0]-1] + " " + events[i][0][1] + nth(events[i][0][1]) + " at " + events[i][2] + " in " + events[i][3];
+		   i = thingy;
+
+		}
+	}
+}
+
+
+
+}
+
 function MakeTables(ishome){
 	"use strict";
 
 	
-var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	
 	var uTable = document.getElementById("upcoming");
 	
 	var pTable = document.getElementById("past");
 	
-	var events = [
-		
-		[[8, 30 , 2018], "Chill First Meeting", "6:00 PM", "CSIC 2120", "Catch up and discuss semester goals and meeting structure"],
-		[[9, 6 , 2018], "First Look Prep Meeting", "6:00 PM", "CSIC 2120","Prepare Demos for first look fair and get volunteers"],
-		[[9, 13 , 2018], "First Look Meeting", "6:00 PM", "CSIC 1115", "Inform new people about the club and demo"],
-		[[9, 13 , 2018], "Unity Tutorial: Joey", "7:00 PM", "CSIC 2120", "Basic Unity tutorial for complete beginners. Covers unity workflow/inspector and some light scripting"],
-		[[9, 14 , 2018], "Unity Tutorial: Josh","5:00 PM", "CSIC 2120", "Basic Unity tutorial for complete beginners. Covers unity workflow/inspector and some light scripting"],
-		[[9, 15 , 2018], "GameMaker Tutorial: Stephen","3:00 PM", "CSIC 2120", "Basic GameMaker tutorial for complete beginners. Covers GM workflow, objects, and inspector"]
-				
-	];
+	
 	var row = uTable.insertRow(0);
 	var cell1 = row.insertCell(0);
 	var cell2 = row.insertCell(1);
