@@ -164,7 +164,7 @@ padding: 10px;
 
 
 .card100{
-
+margin-top: 5px;
     float: left;
     width: 100%
 }
@@ -196,12 +196,6 @@ margin:0px;
 padding-top: 50px;
 }
 
-video {
-    width: 100%;
-    padding: 0px;
-    
-    z-index: 2;
-}
 
  #navarea {
     z-index: 99;
@@ -227,7 +221,7 @@ video {
     font-size: 16px;
     border-radius: 8px;
     width: 200px;
-    top: 55%;
+    top: 60%;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -305,21 +299,41 @@ video {
     z-index: 65;
 }
 
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    
+
+}
+
+
+video {
+    min-height: 100%;
+    z-index: 2;
+    min-width: 100vw;   
+}
+
 @media only screen and (max-width: 768px) {
     .navbar-collapse {
         margin-top: 0px;
     }
 
+
+    
     #videowrapper {
         align-content: center;
     }
 
 
     video {
-        margin-top: -50px;
-        width: 1000px;
-        margin-left: -50%;
+        height: 100vh;
+        z-index: 2;
+        min-width: 100vw;
+        
     }
+    
 
     .float_right{
         float: none;
@@ -361,7 +375,13 @@ video {
     margin-top: -10px;
     top:30%;
     }
+
+    #videowrapper button {
+        top: 50%;
+    }
 }
+
+
 
 @media only screen and (max-width: 1200px) { }
 
@@ -526,8 +546,38 @@ font-size: 20px;
 }
 
 .eventimage{
+    
+    
+    
+}
+
+.eventimage img {
+
     width: 300px;
-    height: 300px;
-    float: left;
-    max-width: 80%;
+    height: 200px;
+    
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .eventimage {
+    float: none !important;
+    
+    }
+
+    .eventimage img {
+        display: block !important;
+        float: none !important;
+    
+    }
+
+}
+
+.plainbutton {
+border: none;
+overflow: auto;
+background-color: white;
+
 }
