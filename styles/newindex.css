@@ -68,10 +68,12 @@ td, th {
     font-family: 'Do Hyeon', sans-serif;
     margin: 0px;
     padding: 0px;
-    width: 100px;
+    width: 20%;
     height: 30px;
     margin-left: 40%;
     margin-right: 40%;
+    
+    
     text-align: center;
     background-color: black;
     
@@ -161,7 +163,10 @@ padding: 10px;
 
 
 
-
+.graybg {
+    background-color: darkgray;
+    padding-bottom: 20px;
+}
 
 .card100{
 margin-top: 5px;
@@ -329,6 +334,7 @@ video {
 
     video {
         height: 100vh;
+        margin-left: -25vw;
         z-index: 2;
         min-width: 100vw;
         
@@ -392,10 +398,17 @@ video {
    }
 }
 
+.dumbthing {
+    height: 40px;
+}
+
 @media only screen and (max-width: 768px) {
     .main {
        padding-top: 20px;
    }  
+   .dumbthing {
+       height: 20px;
+   }
    .breakarea{padding-top: 0px;}
 }
 
@@ -555,6 +568,8 @@ font-size: 20px;
 
     width: 300px;
     height: 200px;
+    padding-left: 20px;
+    padding-right:20px;
     
 }
 
@@ -563,6 +578,8 @@ font-size: 20px;
 @media only screen and (max-width: 768px) {
 
     .eventimage {
+    
+    
     float: none !important;
     
     }
@@ -570,8 +587,17 @@ font-size: 20px;
     .eventimage img {
         display: block !important;
         float: none !important;
+        width: 100%;
+        height: 100%;
     
     }
+
+    .card100{
+        max-width: 80%;
+        padding:5px;
+        
+    }
+    
 
 }
 
