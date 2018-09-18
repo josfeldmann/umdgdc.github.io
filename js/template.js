@@ -28,7 +28,7 @@ function makeHeader(){
 
 var events = [
 		
-	[[8, 30 , 2018], "Chill First Meeting", "6:00 PM", "CSIC 2120", "Catch up and discuss semester goals and meeting structure"],
+	[[9, 20 , 2018], "Interest Meeting", "7:00 PM", "CSIC 1121", "Catch up and discuss semester goals and meeting structure"],
 	[[9, 6 , 2018], "First Look Prep Meeting", "6:00 PM", "CSIC 2120","Prepare Demos for first look fair and get volunteers"],
 	[[9, 13 , 2018], "First Look Meeting", "6:00 PM", "CSIC 1115", "Inform new people about the club and demo"],
 	[[9, 13 , 2018], "Unity Tutorial: Joey", "7:00 PM", "CSIC 2120", "Basic Unity tutorial for complete beginners. Covers unity workflow/inspector and some light scripting"],
@@ -54,7 +54,7 @@ function nth(d) {
 function nextMeeting () {
 
 	var nmeeting = document.getElementById("nmeeting");
-	nmeeting.innerHTML = "the fuck?";
+	
 	
 	var d = new Date();
 	
