@@ -29,11 +29,11 @@ function makeHeader(){
 var events = [
 		
 	[[9, 20 , 2018], "Interest Meeting", "7:00 PM", "CSIC 1121", "Catch up and discuss semester goals and meeting structure"],
-	[[9, 6 , 2018], "First Look Prep Meeting", "6:00 PM", "CSIC 2120","Prepare Demos for first look fair and get volunteers"],
-	[[9, 13 , 2018], "First Look Meeting", "6:00 PM", "CSIC 1115", "Inform new people about the club and demo"],
-	[[9, 13 , 2018], "Unity Tutorial: Joey", "7:00 PM", "CSIC 2120", "Basic Unity tutorial for complete beginners. Covers unity workflow/inspector and some light scripting"],
-	[[9, 14 , 2018], "Unity Tutorial: Josh","5:00 PM", "CSIC 2120", "Basic Unity tutorial for complete beginners. Covers unity workflow/inspector and some light scripting"],
-	[[9, 15 , 2018], "GameMaker Tutorial: Stephen","3:00 PM", "CSIC 2120", "Basic GameMaker tutorial for complete beginners. Covers GM workflow, objects, and inspector"]
+	[[9, 27 , 2018], "First Look Prep Meeting", "6:00 PM", "CSIC 1121","Prepare Demos for first look fair and get volunteers"],
+	[[10, 4 , 2018], "First Look Meeting", "6:00 PM", "CSIC 1121", "Inform new people about the club and demo"],
+	[[10, 11 , 2018], "Unity Tutorial: Joey", "7:00 PM", "CSIC 1121", "Basic Unity tutorial for complete beginners. Covers unity workflow/inspector and some light scripting"],
+	[[10, 18 , 2018], "Unity Tutorial: Josh","5:00 PM", "CSIC 1121", "Basic Unity tutorial for complete beginners. Covers unity workflow/inspector and some light scripting"],
+	[[10, 25 , 2018], "GameMaker Tutorial: Stephen","3:00 PM", "CSIC 1121", "Basic GameMaker tutorial for complete beginners. Covers GM workflow, objects, and inspector"]
 			
 ];
 
@@ -73,7 +73,7 @@ function nextMeeting () {
 	
 	
 	//add to upcoming table	
-	if (eventdate[0] > curmonth + 1 || (eventdate[0] === (curmonth + 1) && eventdate[1] >= curday + 1) && eventdate[2] >= curyear){
+	if (eventdate[0] > curmonth + 1 || (eventdate[0] === (curmonth + 1) && eventdate[1] >= curday) && eventdate[2] >= curyear){
 		
 		if (events[i][1].includes("eeting")){
 		   nmeeting.innerHTML = "Next meeting will be held on " + months[events[i][0][0]-1] + " " + events[i][0][1] + nth(events[i][0][1]) + " at " + events[i][2] + " in " + events[i][3];
