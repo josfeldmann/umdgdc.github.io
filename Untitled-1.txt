@@ -1,0 +1,7 @@
+What We Need
+
+
+- Board
+- Player Models with Basic anims (walk,run,jump,punch,die)
+- Board Objects
+
