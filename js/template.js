@@ -29,10 +29,10 @@ function makeHeader(){
 var events = [
 		
 	[[9, 20 , 2018], "Interest Meeting", "7:00 PM", "CSIC 1121", "Catch up and discuss semester goals and meeting structure"],
-	[[9, 27 , 2018], "First Look Prep Meeting", "6:00 PM", "CSIC 1121","Prepare Demos for first look fair and get volunteers"],
-	[[10, 4 , 2018], "First Look Meeting", "6:00 PM", "CSIC 1121", "Inform new people about the club and demo"],
+	[[9, 27 , 2018], "First Look Prep Meeting", "7:00 PM", "CSIC 1121","Prepare Demos for first look fair and get volunteers"],
+	[[10, 4 , 2018], "First Look Meeting", "7:00 PM", "CSIC 1121", "Inform new people about the club and demo"],
 	[[10, 11 , 2018], "Unity Tutorial: Joey", "7:00 PM", "CSIC 1121", "Basic Unity tutorial for complete beginners. Covers unity workflow/inspector and some light scripting"],
-	[[10, 18 , 2018], "Unity Tutorial: Josh","5:00 PM", "CSIC 1121", "Basic Unity tutorial for complete beginners. Covers unity workflow/inspector and some light scripting"],
+	[[10, 18 , 2018], "Unity Tutorial: Josh","7:00 PM", "CSIC 1121", "Basic Unity tutorial for complete beginners. Covers unity workflow/inspector and some light scripting"],
 	[[10, 25 , 2018], "GameMaker Tutorial: Stephen","3:00 PM", "CSIC 1121", "Basic GameMaker tutorial for complete beginners. Covers GM workflow, objects, and inspector"]
 			
 ];
